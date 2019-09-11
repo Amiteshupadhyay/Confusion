@@ -49,7 +49,7 @@ function auth(req, res, next) {
   if (user == 'admin' && pass == '1234') {
     next();
   } else {
-    var err = new Error('You are not authorized');
+    var err = new Error('You are not authorized to this page');
     res.setHeader('WWW-Authenticate', 'Basic');
     err.status = 401;
     return next(err);
