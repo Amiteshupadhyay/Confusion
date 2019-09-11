@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const promoRouter = express.Router();
-const Promos = require('../models/promo')
+const Promos = require('../models/promo');
 promoRouter.use(bodyParser.json());
 promoRouter.route('/')
 
@@ -81,9 +81,4 @@ promoRouter.route('/:PromoId')
         next(err);
       })
   });
-
-
-
-
-
 module.exports = promoRouter;
